@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Shield } from 'lucide-react';
 
 const Footer = () => {
@@ -8,10 +9,10 @@ const Footer = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
+            <Link to="/" className="flex items-center gap-2 mb-4">
               <Shield className="h-6 w-6 text-quantum-teal" />
               <span className="font-bold text-lg">QuantumShield</span>
-            </div>
+            </Link>
             <p className="text-quantum-light/80 text-sm mb-6">
               Securing blockchain technology for the quantum age with advanced cryptographic solutions.
             </p>
@@ -70,7 +71,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><a href="#" className="text-quantum-light/80 hover:text-quantum-teal transition-colors text-sm">About Us</a></li>
               <li><a href="#" className="text-quantum-light/80 hover:text-quantum-teal transition-colors text-sm">Careers</a></li>
-              <li><a href="#" className="text-quantum-light/80 hover:text-quantum-teal transition-colors text-sm">Contact</a></li>
+              <li><Link to="/contact" className="text-quantum-light/80 hover:text-quantum-teal transition-colors text-sm">Contact</Link></li>
               <li><a href="#" className="text-quantum-light/80 hover:text-quantum-teal transition-colors text-sm">Privacy Policy</a></li>
               <li><a href="#" className="text-quantum-light/80 hover:text-quantum-teal transition-colors text-sm">Terms of Service</a></li>
             </ul>
@@ -81,9 +82,15 @@ const Footer = () => {
           <p className="text-quantum-light/60 text-sm">
             © 2025 QuantumShield Ledger. All rights reserved.
           </p>
-          <p className="text-quantum-light/60 text-sm mt-4 md:mt-0">
-            Securing the future of blockchain technology
-          </p>
+          <div className="flex gap-4 mt-4 md:mt-0">
+            <Link to="/demo" className="text-quantum-light/60 hover:text-quantum-teal text-sm">
+              Interactive Demo
+            </Link>
+            <span className="text-quantum-light/30">|</span>
+            <Link to="/contact" className="text-quantum-light/60 hover:text-quantum-teal text-sm">
+              Contact Us
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
